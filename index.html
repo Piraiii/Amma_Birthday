@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="ta">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>For My Amma ❤️</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            font-family: Georgia, "Noto Sans Tamil", serif;
+            background: linear-gradient(135deg, #fff7ed, #f8e4d0, #f7d7d0);
+            color: #5b4035;
+            overflow-x: hidden;
+        }
+
+        /* Floating flowers */
+        .flower {
+            position: fixed;
+            font-size: 25px;
+            animation: float 7s linear infinite;
+            opacity: 0.65;
+            z-index: 1;
+        }
+
+        .f1 { left: 8%; top: 100%; animation-delay: 0s; }
+        .f2 { left: 25%; top: 100%; animation-delay: 2s; }
+        .f3 { left: 70%; top: 100%; animation-delay: 4s; }
+        .f4 { left: 88%; top: 100%; animation-delay: 1s; }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0) rotate(0deg);
+            }
+
+            100% {
+                transform: translateY(-120vh) rotate(360deg);
+            }
+        }
+
+        /* First screen */
+        .welcome {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 25px;
+        }
+
+        .welcome-box {
+            background: rgba(255,255,255,0.78);
+            padding: 45px 30px;
+            border-radius: 30px;
+            max-width: 600px;
+            width: 100%;
+            box-shadow: 0 15px 45px rgba(92,55,35,0.15);
+            border: 1px solid rgba(180,120,80,0.2);
+        }
+
+        .small-title {
+            font-size: 18px;
+            letter-spacing: 2px;
+            color: #98705d;
+            margin-bottom: 15px;
+        }
+
+        .welcome h1 {
+            font-size: 48px;
+            margin: 10px 0;
+            color: #9b5d48;
+        }
+
+        .welcome p {
+            font-size: 19px;
+            line-height: 1.8;
+            color: #725448;
+        }
+
+        .heart {
+            color: #b96b68;
+            font-size: 30px;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 15px 32px;
+            border: none;
+            border-radius: 40px;
+            background: linear-gradient(135deg, #a96855, #c88472);
+            color: white;
+            font-size: 18px;
+            cursor: pointer;
+            box-shadow: 0 8px 20px rgba(120,70,50,0.2);
+            transition: 0.3s;
+        }
+
+        button:hover {
+            transform: scale(1.05);
+        }
+
+        /* Main birthday section */
+        #birthday {
+            display: none;
+            padding: 35px 18px 60px;
+            text-align: center;
+            animation: appear 1.5s ease;
+        }
+
+        @keyframes appear {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .card {
+            max-width: 850px;
+            margin: auto;
+            background: rgba(255,255,255,0.88);
+            border-radius: 35px;
+            padding: 35px 22px 45px;
+            box-shadow: 0 20px 60px rgba(91,58,40,0.18);
+        }
+
+        .birthday-title {
+            font-size: 42px;
+            color: #a45f4e;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            font-size: 20px;
+            color: #8b6b5c;
+            font-style: italic;
+        }
+
+        /* Photo */
+        .photo-frame {
+            width: min(90%, 470px);
+            margin: 30px auto;
+            padding: 10px;
+            background: #fffaf5;
+            border-radius: 25px;
+            box-shadow: 0 12px 35px rgba(75,45,30,0.2);
+        }
+
+        .photo-frame img {
+            width: 100%;
+            display: block;
+            border-radius: 18px;
+        }
+
+        .message {
+            max-width: 700px;
+            margin: 25px auto 0;
+            font-size: 19px;
+            line-height: 2;
+            color: #604940;
+        }
+
+        .message strong {
+            color: #a45f4e;
+        }
+
+        .divider {
+            margin: 30px auto;
+            font-size: 28px;
+            color: #b47a68;
+        }
+
+        .ending {
+            margin-top: 30px;
+            font-size: 22px;
+            line-height: 1.8;
+            color: #704b3e;
+        }
+
+        .love {
+            font-size: 30px;
+            color: #a45f4e;
+            margin-top: 25px;
+        }
+
+        .signature {
+            font-size: 18px;
+            margin-top: 15px;
+            color: #8b6b5c;
+            font-style: italic;
+        }
+
+        @media (max-width: 600px) {
+            .welcome h1 {
+                font-size: 38px;
+            }
+
+            .birthday-title {
+                font-size: 32px;
+            }
+
+            .message {
+                font-size: 17px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Floating flowers -->
+    <div class="flower f1">🌸</div>
+    <div class="flower f2">🌼</div>
+    <div class="flower f3">🌸</div>
+    <div class="flower f4">🌷</div>
+
+
+    <!-- FIRST SCREEN -->
+    <section class="welcome" id="welcome">
+
+        <div class="welcome-box">
+
+            <div class="small-title">
+                ஒரு சின்ன surprise... ❤️
+            </div>
+
+            <div class="heart">♡</div>
+
+            <h1>என் அம்மாவிற்காக...</h1>
+
+            <p>
+                என் வாழ்க்கையில்<br>
+                மிகவும் special-ஆன ஒருவருக்காக<br>
+                இந்த சின்ன surprise. 🌸
+            </p>
+
+            <p>
+                <i>
+                    "என் வாழ்க்கையின் முதல் சிறந்த தோழிக்கு..."
+                </i>
+            </p>
+
+            <button onclick="openBirthday()">
+                🎁 Surprise Open பண்ணுங்க ❤️
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- BIRTHDAY PAGE -->
+    <section id="birthday">
+
+        <div class="card">
+
+            <div class="heart">♡</div>
+
+            <h1 class="birthday-title">
+                இனிய பிறந்தநாள் வாழ்த்துக்கள் அம்மா! 🎂
+            </h1>
+
+            <p class="subtitle">
+                என் வாழ்க்கையின் முதல் சிறந்த தோழிக்கு... ❤️
+            </p>
+
+
+            <!-- PHOTO -->
+            <div class="photo-frame">
+
+                <img src="amma.png" alt="My Amma">
+
+            </div>
+
+
+            <!-- EMOTIONAL MESSAGE -->
+            <div class="message">
+
+                <p>
+                    இன்று உங்கள் பிறந்தநாள் மட்டும் இல்லை அம்மா...
+                </p>
+
+                <p>
+                    <strong>
+                        என் வாழ்க்கையில் நீங்கள் இருந்ததற்காக
+                        நான் இன்னொரு முறை நன்றி சொல்ல வேண்டிய நாள்.
+                    </strong> ❤️
+                </p>
+
+                <p>
+                    என் வாழ்க்கையின் ஒவ்வொரு கட்டத்திலும்,
+                    எனக்காக யோசித்த முதல் மனிதர் நீங்கள்.
+                </p>
+
+                <p>
+                    நான் சந்தோஷமாக இருக்கும்போது
+                    என்னைவிட அதிகமாக சந்தோஷப்பட்டதும் நீங்கள்...
+                    <br>
+
+                    நான் கஷ்டப்படும்போது
+                    எதுவும் சொல்லாமல் என் அருகில் நின்றதும் நீங்கள்...
+                </p>
+
+                <p>
+                    சில நேரங்களில் என்னால்
+                    என் மனதில் இருப்பதை கூட சொல்ல முடியாது.
+                    ஆனால் நான் சொல்லாமலேயே
+                    <strong>
+                        என்ன உணர்கிறேன் என்று புரிந்து கொள்பவர் நீங்கள்.
+                    </strong> 🥹❤️
+                </p>
+
+                <div class="divider">
+                    🌸 ❤️ 🌸
+                </div>
+
+                <p>
+                    நீங்கள் என் அம்மா மட்டுமல்ல...
+                </p>
+
+                <p>
+                    <strong>
+                        என் முதல் Best Friend.<br>
+                        என் Safe Place.<br>
+                        என் Biggest Support.<br>
+                        என் வாழ்க்கையின் மிக அழகான உறவு.
+                    </strong>
+                </p>
+
+                <p>
+                    உங்கள் வாழ்க்கையின் இன்னொரு அழகான
+                    அத்தியாயத்திற்குள் இன்று நீங்கள்
+                    அடியெடுத்து வைக்கிறீர்கள்.
+                </p>
+
+                <p>
+                    இந்த புதிய வயது உங்களுக்கு
+                    இன்னும் நிறைய சிரிப்பையும்,
+                    நிம்மதியையும்,
+                    ஆரோக்கியத்தையும்,
+                    நீங்கள் ஆசைப்படும் எல்லா
+                    சந்தோஷங்களையும் கொண்டு வர வேண்டும். ❤️
+                </p>
+
+                <p>
+                    எப்போதும் எல்லோருக்காகவும் வாழும் நீங்கள்,
+                    இந்த வயதில்
+                    <strong>
+                        உங்களுக்காகவும் நிறைய வாழ வேண்டும் அம்மா.
+                    </strong> 🌷
+                </p>
+
+                <p>
+                    எவ்வளவு பெரியவளாக நான் வளர்ந்தாலும்,
+                    உங்களைப் பொறுத்தவரை
+                    நான் எப்போதும் உங்கள் குழந்தைதான்.
+                </p>
+
+                <p>
+                    அதுதான் எனக்கு உலகத்திலேயே
+                    மிகவும் பாதுகாப்பான உணர்வு. 🥹❤️
+                </p>
+
+            </div>
+
+
+            <div class="divider">
+                ✨ 🌸 ✨
+            </div>
+
+
+            <div class="ending">
+
+                <strong>
+                    என் வாழ்க்கையின் முதல் தோழி,<br>
+                    என் மிகப்பெரிய பலம்,<br>
+                    என் அன்பான அம்மா...
+                </strong>
+
+                <div class="love">
+                    ❤️ உங்களை ரொம்ப ரொம்ப நேசிக்கிறேன் ❤️
+                </div>
+
+                <div class="signature">
+                    — என்றும் உங்கள் செல்ல மகள் 🥹❤️
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <script>
+
+        function openBirthday() {
+
+            document.getElementById("welcome").style.display = "none";
+
+            document.getElementById("birthday").style.display = "block";
+
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+
+        }
+
+    </script>
+
+</body>
+</html>
